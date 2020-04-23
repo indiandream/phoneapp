@@ -1,0 +1,356 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+    background-color: #b81568;
+    
+}
+
+p{
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+h1{
+    background-color: #b81568;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+h2{
+    background-color: #b81568;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    border: 2px solid white;
+}
+li{
+    list-style: none;
+    padding: 16px 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    padding-top: 10px;
+    width: 100%;
+    height: 150px;
+    background-color: #b81568;
+}
+.page{
+    width: 100%;
+    height: auto;
+    
+    
+}
+.page-title{
+    width: 100%;
+    height: 150px;  
+    padding-top: 0%; 
+}
+.page-nav{    
+    width: 100%;
+    height: 60px;
+    display: none;
+    
+}
+.page-main{
+    width: 100%;
+    height: auto;
+    background-color: white;   
+}
+.page-aside{
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+.scrol{
+    border: 1px solid black;
+}
+.page-footer{    
+    width: 100%;
+    height: 100px; 
+    background-color: #b81568;   
+}
+.nav{
+    display: none;
+    
+}
+ul li{
+    display: block;
+    line-height: 4px;
+    margin: 0;
+}
+ul li a{
+    color: white;
+    font-size: 15px;
+    padding: 7px 20px;
+    border-radius: 2px;
+}
+
+a.active,a:hover{
+    background:gray;
+    transition: .5s;
+}
+#menu{
+    width: 35px;
+    height: 30px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+    
+}
+.bar{
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+#bar1{
+    transform: translateY(-4px);
+}
+#bar3{
+    transform: translateY(4px);
+}
+.change .bar{
+    background-color: white;
+}
+.change #bar1{
+    transform: translateY(4px) rotate(-45deg);
+}
+.change #bar3{
+    transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+    opacity: 0;
+}
+.change{
+    display: block;
+}
+
+.slider{
+    width: 100%;
+    height: 350px; 
+    margin: 0;
+    padding: 0;
+    position: relative;  
+    background-image: url(hem1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.slider img{
+    width: 100%;
+    height: 350px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+.slider img:nth-child(3){
+    animation: fade 16s 0s infinite;
+}
+.slider img:nth-child(2){
+    animation: fade 16s 4s infinite;
+}
+.slider img:nth-child(1){
+    animation: fade 16s 8s infinite;
+}
+@keyframes fade{
+    17%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    94%{
+        opacity: 0;
+    }
+}
+@media only screen and (min-width: 675px) {
+    h3{
+        display: none;
+    }
+    #menu-bar{
+        display: none;
+    }
+    h2{
+        color: white;
+        border: 2px solid white;
+        font-size: 13px;
+    }
+    h1{
+        border: 1px solid white;
+    }
+
+    .page{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto  auto 1fr auto;
+        grid-template-areas: 
+            "title title title title"
+            "nav nav nav nav"
+            
+            "main main main main"
+            "aside aside aside aside"
+            "footer footer footer footer";
+    }
+
+    .page-title{
+        grid-area: title;
+        
+    }
+    .page-nav{
+        grid-area: nav;
+        display: block;
+    }
+    
+    .page-main{
+        grid-area: main;
+
+    }
+    .page-main p{
+        
+        line-height: 5px; 
+        padding: 2px;
+        text-align:justify;
+    }
+    .page-aside{
+        grid-area: aside;
+    }
+    .page-aside{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 2fr;
+        grid-template-areas: 
+            "title2 title2 title2"
+            "mar1 mar2 mar3"
+        ;
+    }
+    .scrol1{
+        grid-area: mar1;
+        height: 100px;
+        
+    }
+    .scrol2{
+        grid-area: mar2;
+        height: 100px;
+
+    }
+    .scrol3{
+        grid-area: mar3;
+        height: 100px;
+    }
+    
+    .page-main{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        
+        
+    }
+    .page-main .members{
+        display: flex;
+        flex-flow: column;
+        border: 1px solid black;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .slider{
+        grid-area: title1;
+    }
+    h1{
+        grid-area: main4;
+        text-align: center;
+    }
+    footer > p{
+        color: black;
+        text-align: center;
+        background-color: white;
+        border: 1px solid black;
+    }
+    .page-aside marquee{
+        border: 1px solid black;
+    }
+    .page-aside marquee p{
+        color: black;
+        text-align: left;
+        background-color: white;
+    }
+    .info{
+        grid-area: main5;
+        color: black;
+        border: 1px solid white;
+        text-align: justify;
+    }
+    
+    .img-1{
+        grid-area: main1;
+    }
+    .img-2{
+        grid-area: main2;
+    }
+    .img-3{
+        grid-area: main3;
+    }
+    .img-6{
+        grid-area: main6;
+    }
+    .img-7{
+        grid-area: main7;
+    }
+    .img-8{
+        grid-area: main8;
+    }
+    main article img{
+        width: 100%;
+        height: 150px;
+        align-content: center;
+    }
+    main article p{
+        border: none;
+    }
+
+    /*-----------------------------------------*/
+    nav{
+        background: #b81568;
+        height: auto;
+        width: 100%;
+    }
+    
+    nav ul{
+        
+        margin-right: 20px;
+    }
+    
+    nav ul li{
+        display: inline-block;
+        line-height: 2px;
+        margin: 0;
+    }
+    
+    nav ul li a{
+        color:white;
+        font-size: 15px;
+        padding: 7px 15px;
+        border-radius: 2px;
+    }
+    
+    a.active,a:hover{
+        background: gray;
+        transition: .5s;
+    }
+/*----------------------------------*/   
+    footer{
+        
+        height: 150px;
+        grid-area: footer;
+        display: flex;
+        
+    }
+    
+  }

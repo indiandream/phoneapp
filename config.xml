@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<widget xmlns = "http://www.w3.org/ns/widgets" 
+   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.phoneapp.onlineviewer" version = "1.0">
+   
+   <name>My Phone App</name>
+   
+   <description>
+      My Phone App Online Viewer
+   </description>
+   
+  
+   
+   <preference name = "permissions" value = "none"/>
+   
+   
+   
+</widget>
